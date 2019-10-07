@@ -9,14 +9,15 @@ namespace Exercises.Test
 
         [DataTestMethod]
         [DataRow("", 0)] //First test will test for and empty string and return "0"
+        [DataRow("1", 1)]//If only a number is provided in the string, then the number should be returned.
         public void EmptyString(string stringToTest, int expectedResult)
         {
             //Arrange
-            // Create a new KataFizzBuzz Object
+            // Create a StringCalculatorKata object
             StringCalculatorKata value = new StringCalculatorKata();
 
             //Act
-            string actualResult = value.EmptyString(stringToTest);
+            int actualResult = value.EmptyString(stringToTest);
 
             //Assert
             Assert.AreEqual(expectedResult, actualResult);

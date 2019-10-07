@@ -6,9 +6,16 @@ namespace Exercises
 {
     public class StringCalculatorKata
     {
-        public string EmptyString(string value)
+        public int EmptyString(string value)
         {
-
+            if (value == "")
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
         }
     }
 
