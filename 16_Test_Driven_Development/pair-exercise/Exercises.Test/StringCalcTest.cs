@@ -11,6 +11,7 @@ namespace Exercises.Test
         [DataRow("", 0, DisplayName = "Empty String")] //First test will test for and empty string and return "0"
         [DataRow("1", 1, DisplayName = "One Number")]//If only a number is provided in the string, then the number should be returned.
         [DataRow("1,2", 3, DisplayName = "Comma Seperator")]//If more than one number is provided in the string, then the sums of the numbers should be returned.
+        [DataRow("1\n2\n3", 6, DisplayName = "\n Seperator")]//Returns sum using either comma or \n seperator
 
         public void EmptyString(string stringToTest, int expectedResult)
         {
