@@ -19,8 +19,9 @@ namespace Exercises
             }
             else
             {
+                char[] delimiterChars = { ',', '\n' };
                 string[] valueString = new string[value.Length];
-                string[] newString = value.Split(",");
+                string[] newString = value.Split(delimiterChars);
 
                 int sum = 0;
                 foreach (string word in newString)
