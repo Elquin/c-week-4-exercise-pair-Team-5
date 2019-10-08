@@ -19,19 +19,15 @@ namespace Exercises
             }
             else
             {
+                char[] delimiterChars = { ',', '\n' };
                 string[] valueString = new string[value.Length];
-                value.Split(new Char[] { ',', '\n' });
+                string[] newString = value.Split(delimiterChars);
 
-                int i = 0;
-                foreach (string word in valueString)
+                int sum = 0;
+                foreach (string word in newString)
                 {
-                    i = int.Parse(word);
-                }
-
-                int sum = i;
-                for (int n = 1; n < value.Length; n++)
-                {
-                    sum += value[n];
+                    int i = int.Parse(word);
+                    sum += i;
                 }
                 return sum;
             }
